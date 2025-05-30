@@ -1,3 +1,16 @@
 .pgn__card .pgn__card-wrapper-image-cap.horizontal {
-  max-width: 250px !important;
+  max-height: 250px !important;
+}
+
+.btn-primary {
+  background: #0d8c74 !important;
+  color: #fff;
+}
+
+.site-header-desktop .main-nav .expanded .nav-link, 
+.site-header-desktop .main-nav .nav-link.active, 
+.site-header-desktop .main-nav .nav-link:focus, 
+.site-header-desktop .main-nav .nav-link:hover {
+  background: #0d8c74 !important;
+  color: #fff;
 }
