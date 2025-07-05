@@ -1,6 +1,15 @@
 /* Limit the maximum height of horizontal course card images */
 .pgn__card .pgn__card-wrapper-image-cap.horizontal {
-  max-height: 250px !important;
+  max-height: 230px !important; /* Prevents tall images from stretching cards */
+  overflow: hidden !important;
+}
+
+/* Resmin kapsayıcıyı doldurması ve kırpılması için */
+.pgn__card .pgn__card-wrapper-image-cap.horizontal .pgn__card-image-cap {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 /* Customize primary button background and text color */
