@@ -90,14 +90,20 @@ body:has(form[name="forget-password-form"]) .layout > .w-50.d-flex > .col-md-9.b
 }
 
 
-.extra-large-screen-top-stripe {
-  background-image: linear-gradient(
-    90deg,
-    #d04702 0%,       /* Turuncu-kırmızı */
-    #f29400 20%,      /* Canlı turuncu */
-    #00a99f 45%,      /* Turkuaz */
-    #b1ccc7 70%,      /* Açık mint */
-    #def0ec 100%      /* Çok açık mint */
-  );
+@media (min-width: 1200px) {
+  .extra-large-screen-top-stripe {
+    display: flex !important;
+    height: 0.5rem !important;
+    background-repeat: no-repeat !important;
+    background-image: linear-gradient(
+      90deg,
+      #d04702 0%,       /* Deep orange */
+      #f29400 20%,      /* Vivid orange */
+      #00a99f 45%,      /* Teal */
+      #b1ccc7 70%,      /* Soft mint */
+      #def0ec 100%      /* Pale mint */
+    ) !important;
+  }
 }
+
 
