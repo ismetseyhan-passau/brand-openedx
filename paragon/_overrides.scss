@@ -116,13 +116,6 @@ select:focus {
   border-color: var(--bs-primary, #00a99f) !important;
 }
 
-/* Navigation additional styles */
-.nav-link.active,
-.nav-link:hover {
-  background-color: var(--bs-primary, #00a99f) !important;
-  color: #ffffff !important;
-}
-
 /* Paragon specific overrides */
 .pgn__btn-primary {
   background-color: var(--pgn-color-primary) !important;
@@ -134,9 +127,8 @@ select:focus {
   border-color: var(--pgn-color-brand) !important;
 }
 
-
-
-/* Limit the maximum height of horizontal course card images  Customization*/
+/* ===== COURSE CARD STYLING ===== */
+/* Limit the maximum height of horizontal course card images */
 .pgn__card .pgn__card-wrapper-image-cap.horizontal {
   max-height: 230px !important; /* Prevents tall images from stretching cards */
   overflow: hidden !important;
@@ -152,17 +144,28 @@ select:focus {
 
 /* Customize primary button background and text color */
 .btn-primary {
-  background: #0d8c74 !important;
-  color: #fff;
+  background: var(--bs-primary, #00a99f) !important;
+  border-color: var(--bs-primary, #00a99f) !important;
+  color: #fff !important;
 }
 
-/* Style navigation links on hover, focus, and when active */
-.site-header-desktop .main-nav .expanded .nav-link, 
-.site-header-desktop .main-nav .nav-link.active, 
-.site-header-desktop .main-nav .nav-link:focus, 
-.site-header-desktop .main-nav .nav-link:hover {
-  background: #0d8c74 !important;
-  color: #fff;
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #008a82 !important;
+  border-color: #008a82 !important;
+  color: #fff !important;
+}
+
+/* Style navigation links on active only (remove hover) */
+.site-header-desktop .main-nav .nav-link.active {
+  background: var(--bs-primary, #00a99f) !important;
+  color: #fff !important;
+}
+
+/* Navigation focus - keep for accessibility */
+.site-header-desktop .main-nav .nav-link:focus {
+  outline: 2px solid var(--bs-primary, #00a99f) !important;
+  outline-offset: 2px !important;
 }
 
 /* Hide course organization text on course cards */
@@ -181,9 +184,24 @@ div.search-bar-discover > div.dropdown.filter-block {
   visibility: hidden !important;
 }
 
+/* ===== TOP STRIPE GRADIENT ===== */
+@media (min-width: 1200px) {
+  .extra-large-screen-top-stripe {
+    display: flex !important;
+    height: 0.5rem !important;
+    background-repeat: no-repeat !important;
+    background-image: linear-gradient(
+      90deg,
+      #d04702 0%,       /* Deep orange */
+      #f29400 20%,      /* Vivid orange */
+      #00a99f 45%,      /* Teal */
+      #b1ccc7 70%,      /* Soft mint */
+      #def0ec 100%      /* Pale mint */
+    ) !important;
+  }
+}
+
 /* ===== AUTHENTICATION PAGES ONLY (LOGIN/REGISTER/RESET) ===== */
-/* Add a background image to the login section and stretch it full height */
-/* ===== LOGIN/REGISTER/RESET SAYFALARINDA SADECE ===== */
 /* Login formunun olduğu sayfalarda background image ekle */
 body:has(#sign-in-form) .layout > .w-50.d-flex,
 body:has(form[name="sign-in-form"]) .layout > .w-50.d-flex,
@@ -193,6 +211,8 @@ body:has(form[name="password-reset-form"]) .layout > .w-50.d-flex {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  width: 100% !important;
+  height: 100vh !important;
 }
 
 /* Hide the right-hand white block and SVG shape */
@@ -226,22 +246,3 @@ body:has(form[name="registration-form"]) .layout > .w-50.d-flex > .col-md-9.bg-p
 body:has(form[name="forget-password-form"]) .layout > .w-50.d-flex > .col-md-9.bg-primary-400 {
   background: transparent !important;
 }
-
-
-@media (min-width: 1200px) {
-  .extra-large-screen-top-stripe {
-    display: flex !important;
-    height: 0.5rem !important;
-    background-repeat: no-repeat !important;
-    background-image: linear-gradient(
-      90deg,
-      #d04702 0%,       /* Deep orange */
-      #f29400 20%,      /* Vivid orange */
-      #00a99f 45%,      /* Teal */
-      #b1ccc7 70%,      /* Soft mint */
-      #def0ec 100%      /* Pale mint */
-    ) !important;
-  }
-}
-
-
