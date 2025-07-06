@@ -1,3 +1,18 @@
+// ===== TEMEL RENKLER (En başta olmalı) =====
+$white: #FFFFFF !default;
+$black: #000000 !default;
+
+// ===== GRI TONLARI =====
+$gray-100: #EBEBEB !default;
+$gray-200: #CCCCCC !default;
+$gray-300: #ADADAD !default;
+$gray-400: #8F8F8F !default;
+$gray-500: #707070 !default;
+$gray-600: #5C5C5C !default;
+$gray-700: #454545 !default;
+$gray-800: #333333 !default;
+$gray-900: #212529 !default;
+
 // ===== MEDTIP BRAND COLORS =====
 $primary: #00a99f !default;           
 $secondary: #9b9b9b !default;         
@@ -17,7 +32,7 @@ $accent-b: #00a99f !default;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "brand": $brand,               
+  "brand": $brand,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -30,7 +45,7 @@ $theme-colors: (
 
 // ===== PARAGON BODY & COMPONENT COLORS =====
 $body-bg: $white !default;
-$body-color: #333333 !default;
+$body-color: $gray-700 !default;
 $component-active-bg: $primary !default;
 
 // ===== PARAGON FORM COLORS =====
