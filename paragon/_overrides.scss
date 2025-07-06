@@ -206,7 +206,7 @@ div.search-bar-discover > div.dropdown.filter-block {
 body:has(#sign-in-form) .layout > .w-50.d-flex,
 body:has(form[name="sign-in-form"]) .layout > .w-50.d-flex,
 body:has(form[name="registration-form"]) .layout > .w-50.d-flex,
-body:has(form[name="password-reset-form"]) .layout > .w-50.d-flex {
+body:has(form[name="forget-password-form"]) .layout > .w-50.d-flex {
   background-image: url("https://lms.medtip.de/static/medtip-de/images/login-banner.png") !important;
   background-size: cover !important;
   background-position: center !important;
