@@ -1,4 +1,142 @@
-/* Limit the maximum height of horizontal course card images */
+/* ===== CSS CUSTOM PROPERTIES (Modern Approach) ===== */
+:root {
+  /* Bootstrap 5 CSS custom properties */
+  --bs-primary: #00a99f;
+  --bs-primary-rgb: 0, 169, 159;
+  --bs-secondary: #9b9b9b;
+  --bs-secondary-rgb: 155, 155, 155;
+  --bs-success: #28a745;
+  --bs-success-rgb: 40, 167, 69;
+  --bs-info: #00a99f;
+  --bs-info-rgb: 0, 169, 159;
+  --bs-warning: #f29400;
+  --bs-warning-rgb: 242, 148, 0;
+  --bs-danger: #d04702;
+  --bs-danger-rgb: 208, 71, 2;
+  --bs-light: #f8f9fa;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark: #000000;
+  --bs-dark-rgb: 0, 0, 0;
+  
+  /* OpenedX specific variables */
+  --bs-accent-a: #f29400;
+  --bs-accent-a-rgb: 242, 148, 0;
+  --bs-accent-b: #00a99f;
+  --bs-accent-b-rgb: 0, 169, 159;
+  
+  /* Paragon design system variables */
+  --pgn-color-primary: #00a99f;
+  --pgn-color-primary-100: rgba(0, 169, 159, 0.1);
+  --pgn-color-primary-200: rgba(0, 169, 159, 0.2);
+  --pgn-color-primary-300: rgba(0, 169, 159, 0.3);
+  --pgn-color-primary-500: #00a99f;
+  --pgn-color-primary-700: #008a82;
+  --pgn-color-secondary: #9b9b9b;
+  --pgn-color-brand: #00a99f;
+}
+
+/* ===== ADDITIONAL COLOR SYSTEM OVERRIDES ===== */
+/* Brand buttons */
+.btn-brand {
+  background-color: var(--bs-primary, #00a99f) !important;
+  border-color: var(--bs-primary, #00a99f) !important;
+  color: #ffffff !important;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: #008a82 !important;
+  border-color: #008a82 !important;
+  color: #ffffff !important;
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background-color: var(--bs-secondary, #9b9b9b) !important;
+  border-color: var(--bs-secondary, #9b9b9b) !important;
+  color: #ffffff !important;
+}
+
+/* Warning buttons */
+.btn-warning {
+  background-color: var(--bs-warning, #f29400) !important;
+  border-color: var(--bs-warning, #f29400) !important;
+  color: #ffffff !important;
+}
+
+/* Danger buttons */
+.btn-danger {
+  background-color: var(--bs-danger, #d04702) !important;
+  border-color: var(--bs-danger, #d04702) !important;
+  color: #ffffff !important;
+}
+
+/* Links with CSS variables */
+a:not(.btn),
+.link {
+  color: var(--bs-primary, #00a99f) !important;
+}
+
+a:not(.btn):hover,
+.link:hover {
+  color: #008a82 !important;
+}
+
+/* Form focus states */
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--bs-primary, #00a99f) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 169, 159, 0.25) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: var(--bs-primary, #00a99f) !important;
+}
+
+/* Badges */
+.badge-primary {
+  background-color: var(--bs-primary, #00a99f) !important;
+}
+
+/* Background utilities */
+.bg-primary {
+  background-color: var(--bs-primary, #00a99f) !important;
+}
+
+/* Text utilities */
+.text-primary {
+  color: var(--bs-primary, #00a99f) !important;
+}
+
+/* Border utilities */
+.border-primary {
+  border-color: var(--bs-primary, #00a99f) !important;
+}
+
+/* Navigation additional styles */
+.nav-link.active,
+.nav-link:hover {
+  background-color: var(--bs-primary, #00a99f) !important;
+  color: #ffffff !important;
+}
+
+/* Paragon specific overrides */
+.pgn__btn-primary {
+  background-color: var(--pgn-color-primary) !important;
+  border-color: var(--pgn-color-primary) !important;
+}
+
+.pgn__btn-brand {
+  background-color: var(--pgn-color-brand) !important;
+  border-color: var(--pgn-color-brand) !important;
+}
+
+
+
+/* Limit the maximum height of horizontal course card images  Customization*/
 .pgn__card .pgn__card-wrapper-image-cap.horizontal {
   max-height: 230px !important; /* Prevents tall images from stretching cards */
   overflow: hidden !important;
