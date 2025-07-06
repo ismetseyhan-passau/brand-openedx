@@ -154,7 +154,6 @@ select:focus {
 
 /* Navigation focus - keep for accessibility */
 .site-header-desktop .main-nav .nav-link:focus {
-  outline: 2px solid var(--bs-primary, #00a99f) !important;
   outline-offset: 2px !important;
 }
 
