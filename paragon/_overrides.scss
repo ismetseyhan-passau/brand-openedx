@@ -71,16 +71,6 @@
   color: #ffffff !important;
 }
 
-/* Links with CSS variables */
-a:not(.btn),
-.link {
-  color: var(--bs-primary, #00a99f) !important;
-}
-
-a:not(.btn):hover,
-.link:hover {
-  color: #008a82 !important;
-}
 
 /* Form focus states */
 .form-control:focus,
