@@ -1,2 +1,43 @@
-// Use this file to set SASS variables for @edx/paragon
-// See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
+// ===== MEDTIP BRAND COLORS =====
+$primary: #00a99f !default;           
+$secondary: #9b9b9b !default;         
+$brand: #00a99f !default;             
+$success: #28a745 !default;           
+$info: #00a99f !default;              
+$warning: #f29400 !default;           
+$danger: #d04702 !default;            
+$light: #f8f9fa !default;             
+$dark: #000000 !default;              
+
+// ===== PARAGON ACCENT COLORS =====
+$accent-a: #f29400 !default;          
+$accent-b: #00a99f !default;          
+
+// ===== PARAGON THEME COLORS MAP =====
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "brand": $brand,               
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "accent-a": $accent-a,
+  "accent-b": $accent-b
+) !default;
+
+// ===== PARAGON BODY & COMPONENT COLORS =====
+$body-bg: $white !default;
+$body-color: #333333 !default;
+$component-active-bg: $primary !default;
+
+// ===== PARAGON FORM COLORS =====
+$input-btn-focus-color: $primary !default;
+$input-focus-border-color: $primary !default;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 169, 159, 0.25) !default;
+
+// ===== PARAGON LINK COLORS =====
+$link-color: $primary !default;
+$link-hover-color: darken($primary, 15%) !default;
